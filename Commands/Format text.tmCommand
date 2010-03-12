@@ -6,12 +6,16 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>#!/usr/bin/env ruby
-  exit if ENV['TM_SELECTED_TEXT'].nil?
-  require File.join(File.dirname(__FILE__), "..", "formatter.rb")
-  Formatter.format(ENV['TM_SELECTED_TEXT'])</string>
+require ENV['TM_BUNDLE_PATH'] + "/formatter.rb"
+exit if ENV['TM_SELECTED_TEXT'].nil?
+puts Formatter.format(ENV['TM_SELECTED_TEXT'])</string>
+	<key>input</key>
+	<string>none</string>
 	<key>name</key>
-	<string>Format lines</string>
+	<string>Format text</string>
 	<key>output</key>
 	<string>replaceSelectedText</string>
+	<key>uuid</key>
+	<string>88E4447D-90BA-4530-A6E3-5AF4BC67A246</string>
 </dict>
 </plist>
