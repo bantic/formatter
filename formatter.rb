@@ -16,7 +16,7 @@ class Formatter
     def longest_length_before_separator(lines, separator)
       lines.collect do |line|
         match_before_separator(line, separator).length
-      end.sort.last
+      end.max
     end
     
     def match_before_separator(line, separator)

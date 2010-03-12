@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+  exit if ENV['TM_SELECTED_TEXT'].nil?
+  require File.join(File.dirname(__FILE__), "..", "formatter.rb")
+  Formatter.format(ENV['TM_SELECTED_TEXT'])</string>
+	<key>name</key>
+	<string>Format lines</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+</dict>
+</plist>

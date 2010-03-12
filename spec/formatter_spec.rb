@@ -33,7 +33,7 @@ describe Formatter do
     Formatter.match_before_separator("abc -> 3", "->").should == "abc"
   end
   
-  it "should work" do
+  it "should expand multiple lines correctly" do
     @expected = <<-EOB
       "first_one"             => "def",
       "second"                => "jkl",
